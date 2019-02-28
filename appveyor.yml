@@ -3,7 +3,7 @@ image:
 install:
 - cmd: call "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\vcvarsall.bat" amd64
 - cmd: appveyor DownloadFile https://github.com/bazelbuild/bazel/releases/download/0.21.0/bazel-0.21.0-windows-x86_64.exe -FileName bazel.exe
-- cmd: set PATH=C:\projects\tensorflow_cc;C:\msys64\usr\bin;C:\Python36;%PATH%
+- cmd: set PATH=%PATH%;C:\projects\tensorflow_cc;C:\msys64\usr\bin;C:\Python36
 - cmd: set BAZEL_SH=c:\msys64\usr\bin\bash.exe 
 build_script:
 - cmd: mkdir tensorflow_cc\build_msvc
